@@ -12,8 +12,6 @@ const Home = () => {
       <Link className="home-card" href="clock/">Clock</Link>
       <Link className="home-card" href="cuereceiver/">CueReceiver</Link>
       <Link className="home-card" href="cuesender/">CueSender</Link>
-      <Link className="home-card" href="videoobserver/">Observer</Link>
-      <Link className="home-card" href="videosender/">VideoSender</Link>
     </div>
   )
 }
