@@ -11,13 +11,13 @@ const ContentReceiver = memo(() => {
   useEffect(() => {
     onChildAdded(dbRef, (snapshot) => {
       let data = snapshot.val();
-      console.log(data.content);
+      // console.log(data.content);
       setLoadedContent(data.content);
     });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dbRef]);
 
-  console.log(`useState:${loadedContent}`)
+  // console.log(`useState:${loadedContent}`)
   return(loadedContent)
 });
 
