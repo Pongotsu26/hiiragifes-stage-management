@@ -1,12 +1,12 @@
 "use client";
 
 import { ref, push } from "firebase/database";
-import { rtdb } from "../lib/database";
+import { rtdb } from "../../lib/database";
 import { useState } from "react";
-import ContentReceiver from "./contentReceiver";
+import ContentReceiver from "../../components/contentReceiver";
 import "../../styles/sender.css";
 import Image from "next/image";
-import Send from "../public/send.svg";
+import Send from "../../public/send.svg";
 
 export const metadata = {
   title: "Sender",

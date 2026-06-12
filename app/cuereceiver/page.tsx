@@ -1,8 +1,9 @@
 "use client";
 
-import ContentReceiver from "../cuesender/contentReceiver";
-import Clock from "../clock/clock";
+import ContentReceiver from "../../components/contentReceiver";
+import Clock from "../../components/clock";
 import { useState } from "react";
+// @ts-ignore
 import "../../styles/receiver.css";
 import { Roboto } from "next/font/google";
 
