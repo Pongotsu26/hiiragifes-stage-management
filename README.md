@@ -1,6 +1,6 @@
-# 76-hiiragi-fes
+# hiiragifes-stage-management
 
-**Firebase** を使用したリアルタイムデータ同期機能を備えた Next.js アプリケーションです。76th柊祭開会式/後夜祭運営のために開発されました。
+**Firebase** を使用したリアルタイムデータ同期機能を備えた Next.js アプリケーションです。75,76th柊祭開会式/後夜祭運営のために開発されました。
 
 ## 🔥 Firebase 連携
 
