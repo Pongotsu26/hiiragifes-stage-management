@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 76-hiiragi-fes
 
-## Getting Started
+**Firebase** を使用したリアルタイムデータ同期機能を備えた Next.js アプリケーションです。76th柊祭開会式/後夜祭運営のために開発されました。
 
-First, run the development server:
+## 🔥 Firebase 連携
+
+このプロジェクトは **Firebase** を使用しています：
+
+- **Realtime Database**: ユーザー情報、キュー情報の保存と同期
+- **リアルタイム通信**: 複数ユーザー間での状態管理とメッセージ配信
+
+Firebase 設定は `lib/database.tsx` で管理されています。
+
+## 🚀 使い方
+
+### 前提条件
+
+- Node.js 18 以上
+- pnpm パッケージマネージャー
+- Firebase プロジェクト設定
+
+### インストール
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 依存関係をインストール
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 開発サーバーの起動
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# 通常の開発サーバー
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いてアプリケーションにアクセスできます。
 
-## Learn More
+**HTTPS での起動** (必要に応じて):
+```bash
+pnpm devHttps
+```
 
-To learn more about Next.js, take a look at the following resources:
+### ビルドと本番環境での実行
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# ビルド
+pnpm build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# 本番環境で起動
+pnpm start
+```
 
-## Deploy on Vercel
+### linting
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm lint
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📁 プロジェクト構成
+
+```
+src/
+├── app/              # Next.js App Router ページ
+│   ├── page.tsx     # メインページ
+│   ├── layout.tsx   # ルートレイアウト
+│   └── ...          # 機能別ページ
+├── components/       # React コンポーネント
+├── lib/             # ユーティリティ関数
+│   └── database.tsx # Firebase 設定・管理
+├── styles/          # スタイルシート
+└── public/          # 静的ファイル
+```
+
+## 🛠️ 主な依存関係
+
+- **Next.js 15.4**: React フレームワーク
+- **React 19**: UI ライブラリ
+- **Firebase 12**: リアルタイムデータベース・通信
+- **TypeScript**: 型安全性
+
+## 📝 環境設定
+
+Firebase の認証情報を環境変数で設定してください：
+
+```bash
+# .env.local ファイルを作成
+NEXT_PUBLIC_FIREBASE_API_KEY=xxx
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=xxx
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=xxx
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=xxx
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=xxx
+NEXT_PUBLIC_FIREBASE_APP_ID=xxx
+```
+
+## 📚 参考リンク
+
+- [Next.js ドキュメント](https://nextjs.org/docs)
+- [Firebase ドキュメント](https://firebase.google.com/docs)
+- [WebRTC](https://webrtc.org/)
+
+## 🚢 デプロイ
+
+Vercel での最簡単なデプロイ方法：
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+
+または、`next build` と `next start` で本番環境をビルドして実行してください。
