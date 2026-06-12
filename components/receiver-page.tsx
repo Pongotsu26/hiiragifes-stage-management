@@ -20,7 +20,7 @@ const ReceiverPage = () => {
     changeState(!btnState)
   }
 
-  console.log(btnState)
+  // console.log(btnState)
   return(
     <>
       <div className="receiverBox">

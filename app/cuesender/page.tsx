@@ -1,7 +1,7 @@
 import CueSenderPage from "../../components/cuesender-page";
 
 export const metadata = {
-  title: "HOME",
+  title: "Sender",
 };
 
 const CueSender = () => {
